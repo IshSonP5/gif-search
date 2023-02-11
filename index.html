@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gifs</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css"
+    />
+  </head>
+  <body>
+    <!-- nav -->
+    <nav class="container nav-bar" id="home">
+      <ul>
+        <li><a href="#home" class="secondary">Home</a></li>
+      </ul>
+      <ul>
+        <li><strong>Choose Your Gif!</strong></li>
+      </ul>
+      <ul>
+        <li><a href="#contact" class="secondary">Contact</a></li>
+      </ul>
+    </nav>
+    <!-- query input selector -->
+    <div class="form-wrapper">
+      <form action="#" method="GET" class="js-form container">
+        <label
+          >Topic:
+          <input type="text" name="topic" class="js-query-input" />
+        </label>
+        <label>
+          Number of Gifs
+          <label for="range" name="numOfImages"
+            >Range slider
+            <input
+              class="js-numOfImages"
+              type="range"
+              min="1"
+              max="50"
+              value="25"
+              id="rangeInput"
+              name="rangeInput"
+              oninput="amount.value=rangeInput.value"
+            />
+            <output name="amount" id="amount" for="rangeInput">25</output>
+          </label>
+        </label>
+        <button type="submit" class="btn btn-success">Get Memes</button>
+        <div class="error invisible js-error"></div>
+      </form>
+    </div>
+    <div class="js-gifs-container gif-container container"></div>
+
+    <!-- footer contact -->
+    <div class="container contact" id="contact">
+      <a href="#home" class="secondary">Home</a>
+      <form>
+        <!-- Grid  Form-->
+        <div class="grid">
+          <label for="firstname">
+            First name
+            <input
+              type="text"
+              id="firstname"
+              name="firstname"
+              placeholder="First name"
+              required
+            />
+          </label>
+
+          <label for="lastname">
+            Last name
+            <input
+              type="text"
+              id="lastname"
+              name="lastname"
+              placeholder="Last name"
+              required
+            />
+          </label>
+        </div>
+        <label for="email">Email address</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Email address"
+          required
+        />
+        <small>We'll never share your email with anyone else.</small>
+
+        <label for="message">Your message</label>
+        <textarea
+          name="message"
+          id="message"
+          placeholder="Write Your Message"
+          class="message"
+        ></textarea
+        ><br />
+        <!-- Button -->
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <script src="./gif.js"></script>
+    <script src="./constants.js"></script>
+  </body>
+</html>
