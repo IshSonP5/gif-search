@@ -3,6 +3,8 @@ const queryInput = document.querySelector('.js-query-input');
 const numOfImagesInput = document.querySelector('.js-numOfImages');
 const errorField = document.querySelector('.js-error');
 const gifContainer = document.querySelector('.js-gifs-container');
+const navBar = document.querySelector('.js-nav-bar');
+
 
 function renderImages(response) {
   let html = '';
